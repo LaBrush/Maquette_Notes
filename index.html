@@ -73,7 +73,7 @@
 			
 		<article class="article">
 			<table class="notes-by-matieres">
-				<tr class="graph">
+				<tr class="graph-hidden">
 					<td colspan="10">
 						<div class="maths">&nbsp;</div>
 						<div class="francais">&nbsp;</div>
@@ -146,6 +146,12 @@
 	</section>
 
 	<script type="text/javascript">
+
+		window.onload = function(){
+        
+	        var graph = document.getElementsByClassName("graph-hidden");
+			graph[0].className = "graph";
+	    }
 
 		var hidden = true;
 

@@ -213,6 +213,19 @@ $table-border: 	rgb(230, 230, 230);
 		border-left: 1px $table-border solid;
 	}
 
+	.graph-hidden
+	{
+		div
+		{
+			display: inline-block;
+			vertical-align: bottom;
+			width: 5%;
+			margin: 0 2%;
+			background: #5bacad;
+			height: 1px;
+		}
+	}
+
 	.graph
 	{
 		border-bottom: 1px $table-border solid;
@@ -231,6 +244,7 @@ $table-border: 	rgb(230, 230, 230);
 			background: #5bacad;
 
 			@include box-sizing(border-box);
+			@include transition(all ease 1s)
 		}
 
 		.maths
