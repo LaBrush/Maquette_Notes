@@ -1,0 +1,328 @@
+$body:		rgb(250, 250, 250);
+
+
+.body
+{
+	background: $body;
+}
+
+
+/***********************************************************************************/
+/* Header */
+$header:     rgba(235, 235, 235, 0.9);
+$user:       #e67e22;
+$user-color: #fefefe;
+$logo:       #e67e22;
+$logo-color: #fefefe;
+
+.header
+{
+	width: 100%;
+	position: fixed;
+	padding: 13px;
+	height: 24px;
+	background: $header;
+
+	z-index: 10;
+}
+
+#logo
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 50px;
+	padding: 15px 20px;
+	@include box-sizing(border-box);
+
+	background: $logo;
+	color: $logo-color;
+
+	.h2
+	{
+		display: inline-block;
+	}
+}
+
+.slogan
+{
+	float: right;
+}
+
+.user
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	background: $user;
+	color: $user-color;
+
+	&:hover, &:active, &:focus
+	{
+		background: darken($user, 5%);
+	}
+}
+
+.profil-name
+{
+	display: inline-block;
+	padding: 15px 30px;
+	vertical-align: middle;
+}
+
+
+
+/***********************************************************************************/
+/* Nav */
+$button:        		$header;
+$button-color:  		inherit;
+$nav:	        		$header;
+$nav-color:     		inherit;
+$menu-color: 			inherit;
+$notifications: 		$logo;
+$notifications-color: 	$logo-color;
+
+#nav
+{
+	position: fixed;
+	top: 50px;
+	width: 200px;
+	height: 100%;
+	background: $nav;
+	color: $nav-color;
+	z-index: 1;
+	
+	@include transition(all ease 0.4s);
+}
+
+.button-menu
+{
+	display: none;
+}
+
+#menu
+{
+	height: 100%;
+	color: $menu-color;
+	@include pie-clearfix;
+	cursor: pointer;
+
+	@include transition(all ease 0.4s);
+
+	.h3
+	{
+		padding: 12px;
+	}
+}
+
+.li-menu
+{
+	display: inline-block;
+	width: 100%;
+	padding: 8px 13px;
+	float: left;
+	@include box-sizing(border-box);
+
+	&:hover, &:active, &:focus
+	{
+		background: darken($button, 5%);
+	}
+
+	.notifications
+	{
+		float: right;
+
+		background-color: $notifications;
+		color: $notifications-color;
+		font-size: 0.8em;
+
+		@include border-radius(50px);
+		padding: 0 8px; 
+	}
+}
+
+/* Code pour la version tablettes et mobiles */
+#nav-open
+{
+	position: fixed;
+	top: 50px;
+	width: 200px;
+	height: 100%;
+	background: $nav;
+	color: $nav-color;
+	z-index: 1;
+	
+	@include transition(all ease 0.4s);
+}
+
+#menu-open
+{
+	height: 100%;
+	color: $menu-color;
+	@include pie-clearfix;
+	cursor: pointer;
+
+	@include transition(all ease 0.4s);
+}
+
+
+
+/***********************************************************************************/
+/* Section */
+$article:		rgba(250, 250, 250, 0);
+$table-border: 	rgb(230, 230, 230);
+
+.section
+{
+	width: 100%;
+	padding: 75px 10% 20px 10%;
+
+	@include box-sizing(border-box);
+}
+
+.article
+{
+	margin: 35px auto;
+	background: $article;
+	max-width: 800px;
+	@include pie-clearfix;
+}
+
+.section-title
+{
+	margin: 10px;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.notes-by-matieres
+{
+	width: 100%;
+	
+	td
+	{
+		width: 10%;
+		text-align: center;
+	}
+
+	.axes
+	{
+		width: 0.2%;
+		border-left: 1px $table-border solid;
+	}
+
+	.graph
+	{
+		border-bottom: 1px $table-border solid;
+
+		td
+		{
+			padding: 0;
+		}
+
+		div
+		{
+			display: inline-block;
+			vertical-align: bottom;
+			width: 5%;
+			margin: 0 2%;
+			background: #5bacad;
+
+			@include box-sizing(border-box);
+		}
+
+		.maths
+		{
+			height: 51px;
+		}
+
+		.francais
+		{
+			height: 69px;
+		}
+
+		.sciences-ingenieur
+		{
+			height: 111px;
+		}
+
+		.histoire-geographie
+		{
+			height: 66px;
+		}
+
+		.anglais
+		{
+			height: 78px;
+		}
+
+		.espagnol
+		{
+			height: 60px;
+		}
+
+		.eps
+		{
+			height: 96px;
+		}
+
+		.physique-chimie
+		{
+			height: 99px;
+		}
+
+		.ecjs
+		{
+			height: 1px;
+		}
+
+		.general
+		{
+			height: 69px;
+		}
+	}
+
+	.moyennes
+	{
+		height: 30px;
+
+		div
+		{
+			display: inline-block;
+			width: 9%;
+		}
+	}
+
+	.matieres-name
+	{
+		div
+		{
+			display: inline-block;
+			vertical-align: top;
+			width: 9%;
+
+			font-size: 0.75em;
+			line-height: 1.3em;
+		}
+	}
+}
+
+.detail
+{
+	border: 1px $table-border solid;
+
+	th
+	{
+		text-align: center;
+		padding: 10px;
+		border: 1px $table-border solid;
+	}
+
+	td
+	{
+		padding: 10px;
+		border: 1px $table-border solid;
+	}
+}

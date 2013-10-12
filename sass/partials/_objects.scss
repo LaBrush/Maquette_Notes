@@ -1,0 +1,44 @@
+/* Menu */
+$accueil: 		#e67e22;
+$work-table: 	#c8d92f;
+$notes: 		#5bacad;
+$agenda: 		#2ccc6f;
+$absences: 		#d0384c;
+$vie-lyceenne: 	#9e66a2;
+
+.accueil {border-left: 4px solid $accueil;}
+.work-table {border-left: 4px solid $work-table;}
+.cours {border-left: 4px solid $agenda;}
+.devoirs {border-left: 4px solid $agenda;}
+.notes {border-left: 4px solid $notes;}
+.agenda {border-left: 4px solid $agenda;}
+.absences {border-left: 4px solid $absences;}
+.vie-lyceenne {border-left: 4px solid $vie-lyceenne;}
+
+/*********************************************************************/
+/* Inputs */
+$input: 	#aaaaaa;
+
+input[type="text"]
+{
+	padding: 3px;
+	border: 1px $input solid;
+	@include border-radius(3px);
+
+	&:hover, &:focus, &:active
+	{
+		border: 1px $input solid;
+	}
+}
+
+select
+{
+	padding: 3px;
+	border: 1px $input solid;
+	@include border-radius(3px);
+
+	&:hover, &:focus, &:active
+	{
+		border: 1px $input solid;
+	}
+}

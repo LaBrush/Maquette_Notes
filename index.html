@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]>
+				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!--[if IE 7]>
+	  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+
+<body class="body">
+	
+	<header class="header">
+		<div id="logo">
+			<h1 class="h2">Kub</h1>
+			<span class="slogan">Le nouvel ENT</span>
+		</div>
+		<div class="user">
+			<h2 class="profil-name h3">Nathan Rajohnson</h2>
+		</div>
+	</header>
+
+	<span class="button-menu" onClick="OpenAside()">
+		Menu <i class="icon-chevron-sign-down"></i>
+	</span>
+
+	<nav id="nav">
+
+		<div id="menu">
+			<ul>
+				<ul>
+					<li class="h3 li-menu accueil">Accueil</li>
+					<li class="li-menu">Nouveautés</li>
+					<li class="li-menu">Mes messages <span class="notifications">16</span></li>
+				</ul>
+				<ul>
+					<li class="h3 li-menu work-table">Espace de travail</li>
+					<li class="li-menu">Mes tables de travail</li>
+					<li class="li-menu">Mon fil d'Arianne</li>
+					<li class="li-menu">Les ressources</li>
+				</ul>
+				<ul>
+					<li class="h3 li-menu notes">Notes</li>
+				</ul>
+				<ul>
+					<li class="h3 li-menu agenda">Agenda</li>
+					<li class="li-menu">Ma semaine</li>
+					<li class="li-menu">Le cahier de texte</li>
+					<li class="li-menu">Les devoirs</li>
+				</ul>
+				<ul>
+					<li class="h3 li-menu absences">Absences</li>
+				</ul>
+				<ul>
+					<li class="h3 li-menu vie-lyceenne">Vie lycéenne</li>
+					<li class="li-menu">Les conseils et assemblées</li>
+					<li class="li-menu">Les clubs et l'AS</li>
+				</ul>
+			</ul>
+		</div>
+	</nav>
+
+	<section class="section">
+
+		<article class="article">
+			<h3 class="section-title">Notes</h3>
+		</article>
+			
+		<article class="article">
+			<table class="notes-by-matieres">
+				<tr class="graph">
+					<td colspan="10">
+						<div class="maths">&nbsp;</div>
+						<div class="francais">&nbsp;</div>
+						<div class="sciences-ingenieur">&nbsp;</div>
+						<div class="histoire-geographie">&nbsp;</div>
+						<div class="anglais">&nbsp;</div>
+						<div class="espagnol">&nbsp;</div>
+						<div class="eps">&nbsp;</div>
+						<div class="physique-chimie">&nbsp;</div>
+						<div class="ecjs">&nbsp;</div>
+						<div class="general">&nbsp;</div>
+					</td>
+				</tr>
+				<tr class="moyennes">
+					<td>
+						<div class="maths">8.5</div>
+						<div class="francais">11.5</div>
+						<div class="sciences-ingenieur">18.5</div>
+						<div class="histoire-geographie">11</div>
+						<div class="anglais">13</div>
+						<div class="espagnol">10</div>
+						<div class="eps">16</div>
+						<div class="physique-chimie">16.5</div>
+						<div class="ecjs">NN</div>
+						<div class="general">11.5</div>
+					</td>
+				</tr>
+				<tr class="matieres-name">
+					<td>
+						<div class="maths">Maths</div>
+						<div class="francais">Francais</div>
+						<div class="sciences-ingenieur">Sciences de l'ingénieur</div>
+						<div class="histoire-geographie">Histoire Géographie</div>
+						<div class="anglais">Anglais</div>
+						<div class="espagnol">Espagnol</div>
+						<div class="eps">EPS</div>
+						<div class="physique-chimie">Physique Chimie</div>
+						<div class="ecjs">Educ. juridique et sociale</div>
+						<div class="general">Moyenne générale</div>
+					</td>
+				</tr>
+			</table>
+		</article>
+		<article class="article">
+			<label for="hour">Détail des notes en </label>
+				<select id="hour">
+					<option value="1">Maths</option>
+					<option value="2">Francais</option>
+					<option value="3">Sciences de l'ingénieur</option>
+					<option value="4">Histoire Géographie</option>
+					<option value="5">Anglais</option>
+					<option value="6">Espagnol</option>
+					<option value="7">EPS</option>
+					<option value="8">Physique Chimie</option>
+					<option value="9">ECJS</option>
+				</select>
+		</article>
+		<article class="article">
+			<table class="detail">
+				<tr>
+					<th><strong>7/10</strong></th>
+					<td><em>Controle de connaissances sur le chapitre 1</em></td>
+				</tr>
+				<tr>
+					<th><strong>5.5/20</strong></th>
+					<td><em>DS sur le chapitre 1</em></td>
+				</tr>
+			</table>
+		</article>
+	</section>
+
+	<script type="text/javascript">
+
+		var hidden = true;
+
+		var OpenAside = function(){
+
+			if(hidden == false){
+
+				var button = document.getElementById("nav-open");
+				button.id = "nav";
+
+				var button = document.getElementById("menu-open");
+				button.id = "menu";
+
+				var button = document.getElementsByClassName("icon-chevron-sign-up");
+				button[0].className = "icon-chevron-sign-down";
+
+				hidden = true;
+			}
+
+			else {
+
+				var button = document.getElementById("nav");
+				button.id = "nav-open";
+
+				var button = document.getElementById("menu");
+				button.id = "menu-open";
+
+				var button = document.getElementsByClassName("icon-chevron-sign-down");
+				button[0].className = "icon-chevron-sign-up";
+
+				hidden = false;
+			}
+		}
+
+	</script>
+
+	
+</body>
+</html>
