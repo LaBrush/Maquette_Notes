@@ -77,37 +77,33 @@ $logo-color: #fefefe;
 /***********************************************************************************/
 /* Nav */
 $button:        		$header;
-$button-color:  		inherit;
 $nav:	        		$header;
-$nav-color:     		inherit;
-$menu-color: 			inherit;
 $notifications: 		$logo;
 $notifications-color: 	$logo-color;
 
-#nav
+.nav
 {
 	position: fixed;
-	top: 50px;
+	top: 0;
 	width: 200px;
 	height: 100%;
 	background: $nav;
-	color: $nav-color;
 	z-index: 1;
+	overflow: auto;
 	
 	@include transition(all ease 0.4s);
 }
 
-.button-menu
+#button-menu
 {
 	display: none;
+	@include transition(all ease 0.4s);
 }
 
-#menu
+.menu
 {
-	height: 100%;
-	color: $menu-color;
-	@include pie-clearfix;
 	cursor: pointer;
+	margin: 50px 0 0 0;
 
 	@include transition(all ease 0.4s);
 
@@ -122,8 +118,9 @@ $notifications-color: 	$logo-color;
 	display: inline-block;
 	width: 100%;
 	padding: 8px 13px;
-	float: left;
 	@include box-sizing(border-box);
+
+	@include transition(all ease 0.4s);
 
 	&:hover, &:active, &:focus
 	{
@@ -143,37 +140,10 @@ $notifications-color: 	$logo-color;
 	}
 }
 
-/* Code pour la version tablettes et mobiles */
-#nav-open
-{
-	position: fixed;
-	top: 50px;
-	width: 200px;
-	height: 100%;
-	background: $nav;
-	color: $nav-color;
-	z-index: 1;
-	
-	@include transition(all ease 0.4s);
-}
-
-#menu-open
-{
-	height: 100%;
-	color: $menu-color;
-	@include pie-clearfix;
-	cursor: pointer;
-
-	@include transition(all ease 0.4s);
-}
-
-
 
 /***********************************************************************************/
 /* Section */
-$article:		rgba(250, 250, 250, 0);
 $table-border: 	rgb(230, 230, 230);
-
 .section
 {
 	width: 100%;
@@ -185,7 +155,6 @@ $table-border: 	rgb(230, 230, 230);
 .article
 {
 	margin: 35px auto;
-	background: $article;
 	max-width: 800px;
 	@include pie-clearfix;
 }

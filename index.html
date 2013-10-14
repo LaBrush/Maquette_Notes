@@ -25,38 +25,41 @@
 		</div>
 	</header>
 
-	<span class="button-menu" onClick="OpenAside()">
-		Menu <i class="icon-chevron-sign-down"></i>
+	<span id="button-menu">
+		Menu <i id="chevron" class="icon-chevron-sign-down"></i>
 	</span>
 
-	<nav id="nav">
+	<nav class="nav">
 
-		<div id="menu">
+		<div class="menu">
 			<ul>
-				<ul>
+				<ul class="submenu">
 					<li class="h3 li-menu accueil">Accueil</li>
 					<li class="li-menu">Nouveautés</li>
 					<li class="li-menu">Mes messages <span class="notifications">16</span></li>
 				</ul>
-				<ul>
+				<ul class="submenu">
 					<li class="h3 li-menu work-table">Espace de travail</li>
 					<li class="li-menu">Mes tables de travail</li>
 					<li class="li-menu">Mon fil d'Arianne</li>
 					<li class="li-menu">Les ressources</li>
 				</ul>
-				<ul>
+				<ul class="submenu">
 					<li class="h3 li-menu notes">Notes</li>
+					<li class="li-menu">Mes notes</li>
 				</ul>
-				<ul>
+				<ul class="submenu">
 					<li class="h3 li-menu agenda">Agenda</li>
 					<li class="li-menu">Ma semaine</li>
 					<li class="li-menu">Le cahier de texte</li>
 					<li class="li-menu">Les devoirs</li>
 				</ul>
-				<ul>
+				<ul class="submenu">
 					<li class="h3 li-menu absences">Absences</li>
+					<li class="li-menu">Mes absences</li>
+					<li class="li-menu">Appel</li>
 				</ul>
-				<ul>
+				<ul class="submenu">
 					<li class="h3 li-menu vie-lyceenne">Vie lycéenne</li>
 					<li class="li-menu">Les conseils et assemblées</li>
 					<li class="li-menu">Les clubs et l'AS</li>
@@ -146,47 +149,15 @@
 	</section>
 
 	<script type="text/javascript">
-
 		window.onload = function(){
         
 	        var graph = document.getElementsByClassName("graph-hidden");
 			graph[0].className = "graph";
 	    }
-
-		var hidden = true;
-
-		var OpenAside = function(){
-
-			if(hidden == false){
-
-				var button = document.getElementById("nav-open");
-				button.id = "nav";
-
-				var button = document.getElementById("menu-open");
-				button.id = "menu";
-
-				var button = document.getElementsByClassName("icon-chevron-sign-up");
-				button[0].className = "icon-chevron-sign-down";
-
-				hidden = true;
-			}
-
-			else {
-
-				var button = document.getElementById("nav");
-				button.id = "nav-open";
-
-				var button = document.getElementById("menu");
-				button.id = "menu-open";
-
-				var button = document.getElementsByClassName("icon-chevron-sign-down");
-				button[0].className = "icon-chevron-sign-up";
-
-				hidden = false;
-			}
-		}
-
 	</script>
+
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/nav.min.js"></script>
 
 	
 </body>
